@@ -1,0 +1,26 @@
+{
+  "name": "minecraft-message-board",
+  "version": "1.0.0",
+  "description": "Minecraft message board made in Node JS.",
+  "homepage": "https://github.com/FranVlahovic/Minecraft-Message-Board#readme",
+  "bugs": {
+    "url": "https://github.com/FranVlahovic/Minecraft-Message-Board/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FranVlahovic/Minecraft-Message-Board.git"
+  },
+  "license": "MIT",
+  "author": "F.Vlahovic",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon --env-file=.env src/app.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
