@@ -13,5 +13,31 @@
         {message:message}) %> <% }); %>
       </div>
     </main>
+    <div class="signModal">
+      <form action="/new" method="post" class="messageForm">
+        <div class="modalHeader">
+          <h1>Edit Sign Message</h1>
+        </div>
+        <div class="formInputs">
+          <input
+            class="textInput"
+            type="text"
+            placeholder="Some text"
+            name="text"
+            maxlength="20"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Author"
+            name="user"
+            maxlength="12"
+            required
+          />
+        </div>
+        <button type="submit" class="messageFormBtn">Done</button>
+      </form>
+    </div>
+    <script src="/main.js"></script>
   </body>
 </html>

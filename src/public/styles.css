@@ -10,11 +10,8 @@
 :root {
   --primary-color: #131313;
   --secondary-color: #ffffff;
-  --inputs-buttons: #1e1e1e;
   --reds: #9e1622;
-  --border: #383838;
-  --thrash: brightness(0) saturate(100%) invert(17%) sepia(55%) saturate(6272%)
-    hue-rotate(349deg) brightness(86%) contrast(110%);
+  --button: #6f6f6f;
 }
 
 img {
@@ -31,12 +28,14 @@ main {
 
 .mainContainer {
   background-image: url(/images/mainBg.png);
+  background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
   height: 100vh;
   display: flex;
+  position: fixed;
   justify-content: center;
   padding: 6em 24em 20em 24em;
-  position: absolute;
 }
 
 .messages-container {
@@ -60,6 +59,70 @@ main {
 }
 
 .message-card p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 500;
+}
+
+.signModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+.signModal.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.messageForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 38em;
+  gap: 14em;
+}
+.formInputs {
+  display: flex;
+  flex-direction: column;
+  width: 18rem;
+  background-image: url(/images/sign.png);
+}
+.formInputs input {
+  font-size: 2rem;
+  border: none;
+  background-color: transparent;
+  padding: 0.5em;
+  text-align: center;
+}
+.formInputs input:focus {
+  outline: none;
+}
+.formInputs ::placeholder {
+  color: var(--primary-color);
+}
+
+.modalHeader h1 {
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.messageFormBtn {
+  width: 100%;
+  font-size: 2rem;
+  background-color: var(--button);
+  border: 2px solid var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 0.2em;
+  padding: 0.2em;
+  transition: 0.3s ease-in-out;
+}
+.messageFormBtn:hover {
+  border: 2px solid var(--secondary-color);
+  cursor: pointer;
 }
