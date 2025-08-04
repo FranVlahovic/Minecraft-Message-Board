@@ -35,7 +35,7 @@ main {
   display: flex;
   position: fixed;
   justify-content: center;
-  padding: 6em 24em 20em 24em;
+  padding: 3em 24em 20em 24em;
 }
 
 .messages-container {

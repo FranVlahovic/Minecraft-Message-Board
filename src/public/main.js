@@ -8,7 +8,7 @@ async function openModal(){
         const res = await fetch('/messages');
         const data = await res.json();
 
-        if(data.length < 4){
+        if(data.length < 9){
             signModal.classList.add('active');
         } else {
             alertModal.classList.add('active');
