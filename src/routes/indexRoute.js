@@ -1,13 +1,6 @@
 import express from 'express';
-import { messages } from '../public/messages.js';
+import { messages, formattedDate } from '../public/messages.js';
 const router = express.Router();
-
-const formattedDate = new Date().toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-});
-
 
 router.get('/', (req, res) => {
     try {

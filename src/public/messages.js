@@ -4,8 +4,10 @@ const formattedDate = new Date().toLocaleDateString('en-US', {
     day: 'numeric'
 });
 
-export const messages = [
+const messages = [
     { text: 'This is a Test', user: 'Fran', added: formattedDate },
     { text: 'This is a Test', user: 'Fran', added: formattedDate },
     { text: 'This is a Test', user: 'Fran', added: formattedDate },
 ];
+
+export { formattedDate, messages }
