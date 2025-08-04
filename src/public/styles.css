@@ -44,7 +44,6 @@ main {
   grid-template-rows: repeat(3, 1fr);
   column-gap: 18em;
   position: relative;
-  border: 2px solid var(--reds);
 }
 
 .message-card {
@@ -61,6 +60,41 @@ main {
 .message-card p {
   font-size: 1.2rem;
   font-weight: 500;
+}
+
+.alertModal {
+  display: none;
+  position: fixed;
+  top: 1em;
+  right: 1em;
+}
+
+.alertModal.active {
+  display: flex;
+  background-color: var(--button);
+  border: 2px solid var(--primary-color);
+  border-radius: 1em;
+  padding: 0.3em;
+}
+.innerAlertModal {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-color);
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  gap: 1em;
+}
+.innerAlertModal span {
+  color: var(--reds);
+  font-size: 3rem;
+}
+.innerAlertModal p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+.alertText .primaryText {
+  color: yellow;
 }
 
 .signModal {

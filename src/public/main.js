@@ -1,9 +1,21 @@
 const mainContainer = document.querySelector('.mainContainer');
 const signModal = document.querySelector('.signModal');
+const alertModal = document.querySelector('.alertModal');
 const textInput = document.querySelector('.textInput');
 
-function openModal(){
-    signModal.classList.add('active');
+async function openModal(){
+    try {
+        const res = await fetch('/messages');
+        const data = await res.json();
+
+        if(data.length < 4){
+            signModal.classList.add('active');
+        } else {
+            alertModal.classList.add('active');
+        }
+    } catch (error) {
+        console.error(error);
+    }
 }
 
 function closeModal(){
