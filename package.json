@@ -15,7 +15,7 @@
   "type": "module",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon --env-file=.env src/app.js"
+    "dev": "node --watch src/app.js"
   },
   "dependencies": {
     "dotenv": "^17.2.1",
