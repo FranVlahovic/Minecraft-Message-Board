@@ -12,6 +12,8 @@
 <div align="center">
     <img src="/src/public/images/mmb.png">
     <img src="/src/public/images/mmb2.png">
+    <img src="https://github.com/user-attachments/assets/6c3c1994-dff0-4646-a86d-e69ef8a53f58" />
+    
   <h3 align="center">MC: Message Board</h3>
   
   <p align="center">
