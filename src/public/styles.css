@@ -14,6 +14,18 @@
   --button: #6f6f6f;
 }
 
+@keyframes blink-animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -24,6 +36,22 @@ main {
   display: flex;
   padding: 0;
   margin: 0;
+}
+
+.startScreenAlert {
+  color: var(--secondary-color);
+  font-size: 2rem;
+  animation: blink-animation 3s infinite;
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.hidden {
+  display: none !important;
 }
 
 .mainContainer {
